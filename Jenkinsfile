@@ -3,7 +3,7 @@ pipeline{
   stages{
     stage('Checkout'){
       steps{
-        git url:'https://github.com/jamunarbk/Course-Registration-System.git'
+        git branch:'main',url:'https://github.com/jamunarbk/Course-Registration-System.git'
       }
     }
     stage('Build'){
