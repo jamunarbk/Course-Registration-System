@@ -1,0 +1,55 @@
+<html>
+<head>
+    <title>Register Course</title>
+    <style>
+        body{
+            background-color: #6b4768;
+            text-align: center;
+            margin-top: 90px;
+        }
+        form{
+            margin: auto;
+            padding: 20px;
+            width: 400px;
+            background-color: #f7cef7;
+            border-radius: 5px;
+        }
+        input,select,button{
+            width: 130px;
+            padding: 10px;
+            margin: 10px;
+            border-radius: 5px;
+        }
+        button{
+            background-color: #4CAf50;
+            color: white;
+            font-size: medium;
+            cursor: pointer;
+        }
+        button:hover{
+            background-color: #104212;
+        }
+    </style>
+</head>
+<body>
+<h1 style="color: white;">Kickstart with an exciting course</h1>
+<form action="http://localhost:8080/courses/register" method="post">
+    <label for="name" >Enter your name:</label><br>
+    <input type="text" name="name"><br><br>
+
+    <label for="email">Enter your emailId:</label><br>
+    <input type="email" name="emailId"><br><br>
+
+    <label for="course">Enter your course:</label><br>
+    <select id="course" name="courseName">
+        <option value="Java full stack">Java full stack</option>
+        <option value="Python full stack">Python full stack</option>
+        <option value="Mern full stack">Mern full stack</option>
+        <option value="AI">AI</option>
+        <option value="DevOps">DevOps</option>
+    </select>
+    <br><br>
+    <button type="submit">Submit</button>
+</form>
+</body>
+</html>
