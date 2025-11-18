@@ -3,7 +3,7 @@ pipeline{
   stages{
     stage('Checkout'){
       steps{
-        git branch:'main',url:'https://github.com/jamunarbk/Course-Registration-System.git'
+        checkout scm
       }
     }
     stage('Build'){
@@ -14,11 +14,6 @@ pipeline{
     stage('Test'){
       steps{
         sh 'mvn test'
-      }
-    }
-    stage('Package'){
-      steps{
-        echo 'Build successfull!'
       }
     }
   }
