@@ -8,12 +8,17 @@ pipeline{
     }
     stage('Build'){
       steps{
-        sh 'mvn clean package'
+        bat 'mvn clean package'
       }
     }
     stage('Test'){
       steps{
-        sh 'mvn test'
+        bat 'mvn test'
+      }
+    }
+    stage('Package'){
+      steps{
+        bat 'mvn package'
       }
     }
   }
